@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Classic Logic Puzzle</p>
+          <h1>Sudoku</h1>
+        </div>
+
+        <div class="status-panel">
+          <div class="status-item">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <div class="status-item timer-wrap">
+            <span>Time</span>
+            <strong id="timer">00:00</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-wrap">
+        <section class="board-panel">
+          <div id="board" class="board" aria-label="Sudoku board"></div>
+        </section>
+
+        <aside class="controls-panel">
+          <div class="message-box">
+            <p id="message">Choose a cell and start playing.</p>
+          </div>
+
+          <div class="actions-row">
+            <button id="new-game">New Game</button>
+            <button id="reset-board" class="secondary">Reset</button>
+            <button id="solve-board" class="warning">Solve</button>
+          </div>
+
+          <div class="actions-row compact">
+            <button id="check-board">Check</button>
+            <button id="clear-cell" class="secondary">Clear</button>
+          </div>
+
+          <div class="keypad" aria-label="Number pad">
+            <button class="key" data-value="1">1</button>
+            <button class="key" data-value="2">2</button>
+            <button class="key" data-value="3">3</button>
+            <button class="key" data-value="4">4</button>
+            <button class="key" data-value="5">5</button>
+            <button class="key" data-value="6">6</button>
+            <button class="key" data-value="7">7</button>
+            <button class="key" data-value="8">8</button>
+            <button class="key" data-value="9">9</button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
